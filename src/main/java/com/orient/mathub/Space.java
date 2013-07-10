@@ -3,10 +3,10 @@ package com.orient.mathub;
 import java.util.Vector;
 
 import com.tinkerpop.frames.Property;
-import com.tinkerpop.frames.modules.typedgraph.TypeValue;
+import com.tinkerpop.frames.modules.typedgraph.TypeField;
 
-@TypeValue("GriddedSpace")
-public interface GriddedSpace extends Space{
+@TypeField("type")
+public interface Space {
 
 	@Property("dimensions")
 	public void setDimensions(Vector<Integer> v);
@@ -17,11 +17,6 @@ public interface GriddedSpace extends Space{
 	public void setOrigin(Vector<Double> v);
 	@Property("origin")
 	public Vector<Double> getOrigin();
-	
-	@Property("stepSizes")
-	public void setstepSizes(Vector<Double> v);
-	@Property("stepSizes")
-	public Vector<Double> stepSizes();
 	
 	@Property("units")
 	public void setUnits(String units);

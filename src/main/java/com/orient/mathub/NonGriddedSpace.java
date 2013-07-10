@@ -3,8 +3,10 @@ package com.orient.mathub;
 import java.util.Vector;
 
 import com.tinkerpop.frames.Property;
+import com.tinkerpop.frames.modules.typedgraph.TypeValue;
 
-public interface NonGriddedSpace {
+@TypeValue("NonGriddedSpace")
+public interface NonGriddedSpace extends Space{
 	
 	@Property("dimensions")
 	public void setDimensions(Vector<Integer> v);
@@ -20,5 +22,10 @@ public interface NonGriddedSpace {
 	public void setUnits(String units);
 	@Property("units")
 	public String getUnits();
+	
+	@Property("datasetName")
+	public void setDatasetName(String datasetname);
+	@Property("datasetName")
+	public String getDatasetName();
 
 }
