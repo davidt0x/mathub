@@ -52,7 +52,10 @@ public class App
 		 * 		DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.LONG,
 				DateFormat.LONG);
 		 */
-		
+		DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.LONG,
+				DateFormat.LONG);
+		Date d = new Date();
+		System.out.println(formatter.format(d));
 		//create material
 		Material material = manager.addVertex(null, Material.class);
 		material.setName("Iron");
